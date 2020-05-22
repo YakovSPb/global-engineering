@@ -1,0 +1,360 @@
+// main: main.less
+
+// Common.less
+// Version 3.0
+// 01.12.2017
+
+//==================Variables====================//
+
+//-----------------Resize config----------------------//
+
+@resize-prefix: w;
+
+/* Auto generated project grid START */
+@resize-list: 415,600,768,1024,1281,1920;
+@resize-phone: 415;
+@resize-widePhone: 600;
+@resize-narrowTablet: 768;
+@resize-tablet: 1024;
+@resize-desktop: 1281;
+@resize-wideDesktop: 1920;
+/* Auto generated project grid END */
+
+//-----------------Font-size----------------------//
+
+:root{
+	--content-font: 16px;
+	@media screen and (max-width: 1023px) {
+		--content-font: 14px;
+	}
+}
+
+@font__size-normal: 16px;
+@font__size-small: 0.9rem;
+@font__size-large: 1.15rem;
+@font__size-normal-content: var(--content-font);
+@font__size-small-content: calc(@font__size-normal-content * 0.9);
+@font__size-large-content: calc(@font__size-normal-content * 1.15);
+
+@font__family-main: 'Montserrat',Arial,Helvetica,sans-serif;
+@font__semibold: 500;
+
+//-----------------Colors----------------------//
+
+// Цвет текста контента
+@color__text: #000;
+// Цвет фона контента
+@color__bg: #fff;
+// Основной цвет
+@color__main: #1976d2;
+// Дополнительный цвет
+@color__additional: #ff5f52;
+// Цвет ссылок
+@color__link: #2488ca;
+// Цвет рамок
+@color__border: @color__main;
+// Цвет инпутов
+@color__input_border: #2196F3;
+// Бледный цвет
+@color__pale: darken(@color__bg, 5%);
+// Насыщенный цвет
+@color__saturated: darken(@color__bg, 50%);
+// Цвет линий для разделителей
+@color__line: darken(@color__bg, 15%);
+// Цвет фона TH
+@color__th: @color__pale;
+
+//============ Цвета сообщений ==============//
+
+// Цвет ошибки
+@color__error: #E81010;
+// Success
+@color__success: #00a000;
+// Alert
+@color__alert: #f9992e;
+
+//================Width, sizes=========================//
+
+// Border-radius
+@radius__default: 0;
+// Ширина отступов в сетке
+@gutter: 30px;
+// Отступы в контенте
+@vertical-gutter: 1rem; // Отступ между абзацами
+@ck-image-vertical-gutter: 1rem; // Отступ после картинки, которая заняла 100% ширины в зоне контента на узком экране
+
+//=========== Расширение стилей wysiwyg ==================//
+
+@wysiwyg-extend: true;
+
+//===================Mixins======================//
+
+.container {
+	overflow: hidden;
+	padding-left: 20px;
+	padding-right: 20px;
+	@media screen and (max-width: 1024px) {
+		padding-left: 20px;
+		padding-right: 20px;
+
+	}
+	@media screen and (max-width: 414px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+// Кастомизация placeholder
+.placeholder(@color_input, @font_size) {
+	&::-webkit-input-placeholder {
+		color: @color_input;
+		font-size: @font_size;
+	}
+	&:-moz-placeholder {
+		color: @color_input;
+		font-size: @font_size;
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		color: @color_input;
+		font-size: @font_size;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		color: @color_input;
+		font-size: @font_size;
+	}
+}
+
+.gradient (@startColor, @endColor) {
+	background: linear-gradient(to bottom, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background-color: @startColor;
+}
+
+.horizontal-gradient (@startColor, @endColor) {
+	background: linear-gradient(to right, @startColor, @endColor);
+	background-color: @startColor;
+	background-image: -moz-linear-gradient(left, @startColor, @endColor);
+	background-image: -ms-linear-gradient(left, @startColor, @endColor);
+	background-image: -o-linear-gradient(left, @startColor, @endColor);
+	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+}
+
+// Кнопки
+.button {
+	background: @color__main;
+	border: 0;
+	border-radius: @radius__default;
+	color: #fff;
+	display: inline-block;
+	height: 2rem;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	transition: 0.3s;
+	padding: 1px 1rem 0;
+	cursor: pointer;
+	&:hover{
+		background: darken(@color__main, 5%);
+	}
+	&:focus{
+		outline: none;
+		background: darken(@color__main, 5%);
+	}
+	.icon{
+		color: #fff;
+		vertical-align: baseline;
+	}
+
+	.main-content.@{resize-prefix}-@{resize-phone} &{
+		padding: 2px 1rem 0;
+	}
+}
+
+.button:not(button){
+	line-height: 2rem;
+}
+
+.button-a{
+	.button;
+	line-height: 2rem;
+}
+
+// Заголовки
+.h2{
+	font-weight: 400;
+	margin: @vertical-gutter*1.5 0 @vertical-gutter;
+	text-transform: none;
+	font-size: 1.9rem;
+	line-height: 1.3;
+	.main-content.@{resize-prefix}-@{resize-narrowTablet} &{
+		margin-bottom: @vertical-gutter*0.85;
+	}
+	.main-content.@{resize-prefix}-@{resize-phone} &{
+		margin-bottom: @vertical-gutter*0.75;
+		font-size: 1.6rem;
+	}
+	.main-content.@{resize-prefix}-@{resize-phone} &{
+		margin-bottom: @vertical-gutter*0.65;
+	}
+}
+.h3{
+	font-weight: 400;
+	margin: @vertical-gutter*1.5 0 @vertical-gutter;
+	text-transform: none;
+	font-size: 1.6rem;
+	line-height: 1.3;
+	.main-content.@{resize-prefix}-@{resize-narrowTablet} &{
+		margin-bottom: @vertical-gutter*0.85;
+	}
+	.main-content.@{resize-prefix}-@{resize-phone} &{
+		margin-bottom: @vertical-gutter*0.75;
+		font-size: 1.4rem;
+	}
+	.main-content.@{resize-prefix}-@{resize-phone} &{
+		margin-bottom: @vertical-gutter*0.65;
+	}
+}
+
+.link{
+	color: @color__link;
+	transition: color 0.25s;
+	text-decoration: none;
+	border-bottom: 1px solid @color__link;
+	&:hover{
+		color: @color__main;
+		border-bottom-color: transparent;
+	}
+}
+
+.link-title{
+	color: inherit;
+	transition: color 0.25s;
+	text-decoration: none;
+	font-weight: @font__semibold;
+	line-height: 1.4;
+	border-bottom: none;
+	&:hover{
+		color: @color__main;
+	}
+	&:not([href]){
+		text-decoration: none;
+		&:hover{
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+}
+
+.link-dashed{
+	text-decoration: none;
+	color: @color__link;
+	border-bottom: 1px dashed @color__link;
+	transition: color 0.25s;
+	&:hover{
+		color: @color__main;
+		border-bottom: 1px solid @color__main;
+	}
+}
+
+.link-dashed-title{
+	text-decoration: none;
+	color: inherit;
+	border-bottom: 1px dashed @color__text;
+	transition: color 0.25s;
+	&:hover{
+		color: @color__main;
+		border-bottom: 1px solid @color__main;
+	}
+}
+
+// Текст
+.text-small{
+	font-size: @font__size-small!important;
+}
+.text-large{
+	font-size: @font__size-large!important;
+}
+.text-bold{
+	font-weight: bold!important;
+}
+.text-semibold{
+	font-weight: @font__semibold !important;
+}
+.text-normal{
+	font-weight: normal!important;
+}
+.text-main{
+	color: @color__main!important;
+}
+.text-alt{
+	color: @color__additional!important;
+}
+.text-pale{
+	color: @color__saturated!important;
+}
+
+// clearfix
+.clearfix {
+	&:after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
+
+// Знак рубля
+.rub {
+    &:after {
+        font-family: 'PT Rouble Sans';
+        content: 'С';
+    }
+
+    &.italic {
+        &:after {
+            content: 'М';
+        }
+    }
+
+    &.w400 {
+        &:after {
+            content: 'С';
+        }
+
+        &.italic {
+            &:after {
+                content: 'М';
+            }
+        }
+    }
+
+    &.w600 {
+        &:after {
+            content: 'И';
+        }
+
+        &.italic {
+            &:after {
+                content: 'Т';
+            }
+        }
+    }
+
+    &.w700 {
+        &:after {
+            content: 'Ь';
+        }
+
+        &.italic {
+            &:after {
+                content: 'Б';
+            }
+        }
+    }
+}

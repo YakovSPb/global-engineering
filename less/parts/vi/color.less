@@ -1,0 +1,127 @@
+// main: ../../VI.less
+// .color
+#VI{
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-blue: #9fd7fe;
+    --color-yellow: #f8e988;
+    &.color-white{
+        --vi-color-main: var(--color-white);
+        --vi-color-additional: #000000;
+    }
+    &.color-black{
+        --vi-color-main: var(--color-black);
+        --vi-color-additional: #ffffff;
+        --vi-color-pale: #262626;
+    }
+    &.color-blue{
+        --vi-color-main: var(--color-blue);
+        --vi-color-pale: #d1ecff;
+    }
+    &.color-yellow{
+        --vi-color-main: var(--color-yellow);
+        --vi-color-pale: #fbf2b8;
+    }
+}
+
+
+
+
+#VI {
+    .site-color {
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        &__btn {
+            height: 41px;
+            width: 41px;
+            padding: 1px;
+            border: 2px solid transparent;
+            font-size: 25px;
+            margin-right: 2px;
+
+            & span {
+                width: 35px;
+                height: 35px;
+                line-height: 30px !important;
+                display: block;
+                border-radius: var(--vi-radius);
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    height: 3px;
+                    left: 9px;
+                    bottom: 4px;
+                    width: 17px;
+                    background-color: black;
+                }
+            }
+
+            &.active {
+                border-color: black;
+            }
+
+            &:hover {
+                border-color: black;
+                background-color: transparent;
+            }
+
+            &--white {
+                & span {
+                    background-color: var(--color-white);
+                    color: black;
+                }
+            }
+
+            &--black {
+                & span {
+                    background-color: var(--color-black);
+                    color: white;
+
+                    &::after {
+                        background-color: white;
+                    }
+                }
+            }
+
+            &--blue {
+                & span {
+                    background-color: var(--color-blue);
+                    color: black;
+                }
+            }
+
+            &--yellow {
+                & span {
+                    background-color: var(--color-yellow);
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #VI {
+        .site-color {
+            width: 50%;
+            margin-right: 0;
+            padding-left: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #VI {
+        .site-color {
+            width: 100%;
+            justify-content: center;
+            padding-left: 0;
+        }
+    }
+}
+
+// #color

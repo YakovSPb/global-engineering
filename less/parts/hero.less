@@ -1,0 +1,42 @@
+// main: ../template.less
+// .hero
+.hero {
+    height: 0;
+    padding-bottom: 15%;
+    background-position: center;
+    background-size: cover;
+    margin-left: -20px;
+    margin-right: -20px;
+    &-slider {
+        margin-bottom: 30px;
+        margin-left: -20px;
+        margin-right: -20px;
+        overflow: hidden;
+        &__item {
+            display: none;
+            &:first-child {
+                display: block;
+            }
+        }
+        &__image {
+            height: 0;
+            padding-bottom: 30%;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        margin-bottom: 30px;
+        margin-right: -30px;
+        margin-left: -30px;
+        &-slider {
+            margin-right: -30px;
+            margin-left: -30px;
+        }
+    }
+}
+
+// #hero

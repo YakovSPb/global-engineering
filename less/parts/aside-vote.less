@@ -1,0 +1,55 @@
+// main: ../template.less
+// .vote
+//==== Голосование ====//
+.aside__vote-title {
+    font-size: 13px;
+    margin-top: 15px;
+    cursor: pointer;
+    color: #000;
+}
+
+.vote {
+    &__layout {
+        margin-top: 15px;
+    }
+    &__item {
+        margin-top: 5px;
+        &:first-child {
+            margin-top: 0;
+        }
+    } // Результат голосования
+    &-result__item {
+        font-size: 13px;
+        margin-top: 10px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    &-result__bar {
+        background: @color__main;
+        height: 5px;
+        margin-top: 3px;
+    }
+    &__result__percent {
+        font-size: 12px;
+        color: #999;
+        margin-top: 5px;
+    }
+    &-result__all {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+}
+
+#vote-submit {
+    font-size: 12px;
+    width: 200px;
+    height: 24px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    background: linear-gradient(to bottom, darken(@color__main, 15%), lighten(@color__main, 15%));
+}
+
+// #vote

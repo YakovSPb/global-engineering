@@ -1,0 +1,109 @@
+// out: ../css/compare.css, sourcemap: false, compress: true, autoprefixer: > 5%
+
+@import "common.less";
+
+html {
+	background: #fff;
+}
+
+body {
+	background: #fff;
+	min-width: 800px;
+	font-size: 13px;
+	line-height: 1em;
+	font-weight: 300;
+	position: relative;
+	margin: 20px;
+	font-family : @font__family-main;
+	& > p {
+		margin: 20px 0 0;
+	}
+}
+
+a {
+	color: @color__link;
+}
+
+table {
+	border-collapse: collapse;
+	tr {
+		td {
+			border: 1px solid #ccc;
+			border-right: 0;
+			border-bottom: 0;
+			border-spacing: 1px;
+			font-size: 13px;
+			line-height: 120%;
+			padding: 7px;
+			width: 150px;
+			&:first-child {
+				border-left: 0;
+			}
+			.remove {
+				display: inline-block;
+				color: red;
+					margin-bottom: 1em;
+			}
+			&:first-child{
+				width: 200px;
+			}
+			p{
+				margin: 1em 0;
+			}
+		}
+
+		&:first-child {
+			& > td {
+				border-top : 0;
+				text-align: center;
+				vertical-align: top;
+				& > div {
+					& > p {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+}
+
+.image-wrapper{
+	width: 120px;
+	height: 120px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid @color__border;
+	padding: 10%;
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+	&.no-padding{
+		padding: 2px;
+	}
+	img{
+		max-width: 100%;
+		max-height: 100%;
+		vertical-align: top;
+	}
+}
+
+.trash {
+	color:red;
+	margin-right: 5px;
+	font-size: 14px;
+}
+
+.compare-clear {
+	color: red;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.compare-clear-image{
+	width: 20px;
+	height: 20px;
+	margin-left: -3px;
+	display: inline-block;
+	vertical-align: middle;
+}

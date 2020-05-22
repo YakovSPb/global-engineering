@@ -1,0 +1,35 @@
+#VI.lineheight-normal {
+  --vi-line-height: 1.5em;
+}
+#VI.lineheight-huge {
+  --vi-line-height: 3em;
+}
+#VI .line-height {
+  flex-wrap: wrap;
+}
+#VI .line-height__btn {
+  text-transform: none;
+  border-color: transparent;
+  font-size: 20px;
+  height: 35px;
+  margin-right: 2px;
+  line-height: 30px !important;
+}
+#VI .line-height__btn[data-value="normal"] {
+  letter-spacing: normal;
+}
+#VI .line-height__btn[data-value="huge"] {
+  letter-spacing: 3px;
+}
+#VI .line-height__btn.active {
+  border-color: black;
+}
+#VI .line-height__btn:hover {
+  border-color: black;
+  background-color: transparent;
+  color: black;
+}
+#VI .line-height .btn-group {
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}

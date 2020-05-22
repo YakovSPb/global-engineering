@@ -1,0 +1,95 @@
+// main: ../template.less
+// .news
+.module__news-left {
+    margin-top: 20px;
+    line-height: 1.3;
+    .news {
+        &__item {
+            margin-top: 20px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        &__date {
+            position: relative;
+            color: @color__saturated;
+            margin-top: 3px;
+        }
+        &__item-info {
+            a {
+                text-decoration: none;
+                font-size: @font__size-small;
+                color: #000;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &__all {
+            line-height: 1em;
+            position: relative;
+            margin-top: 20px;
+            text-align: center;
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 2px;
+                left: 0;
+                display: block;
+                width: 65px;
+                height: 2px;
+                background: @color__main;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 2px;
+                display: block;
+                width: 65px;
+                height: 2px;
+                background: @color__main;
+            }
+        }
+        &__all-link {
+            .link;
+            font-size: @font__size-small;
+            text-transform: lowercase;
+            color: #000000;
+            border-bottom-color: #000000;
+            &:hover{
+                border-bottom-color: @color__link;
+            }
+        }
+    }
+
+    // VI
+    #VI &{
+        .news{
+            &__date{
+                color: black;
+                margin-top: 0.5rem;
+            }
+            &__all{
+                border-top: 2px solid black;
+                &:before,
+                &:after{
+                    content: normal;
+                }
+                &-link{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+        #VI.color-black &{
+            .news{
+                &__date{
+                    color: white;
+                }
+            }
+        }
+}
+
+// #news

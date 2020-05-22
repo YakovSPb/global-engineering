@@ -1,0 +1,50 @@
+// main: ../../VI.less
+// .lineheight
+#VI{
+    &.lineheight-normal{
+        --vi-line-height: 1.5em;
+    }
+    &.lineheight-huge{
+        --vi-line-height: 3em;
+    }
+}
+
+#VI {
+    .line-height {
+        flex-wrap: wrap;
+
+        &__btn {
+            text-transform: none;
+            border-color: transparent;
+            font-size: 20px;
+            height: 35px;
+            margin-right: 2px;
+            line-height: 30px !important;
+
+            &[data-value="normal"] {
+                letter-spacing: normal;
+            }
+
+            &[data-value="huge"] {
+                letter-spacing: 3px;
+            }
+
+            &.active {
+                border-color: black;
+            }
+
+            &:hover {
+                border-color: black;
+                background-color: transparent;
+                color: black;
+            }
+        }
+
+        .btn-group {
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// #lineheight

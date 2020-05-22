@@ -1,0 +1,70 @@
+#VI.fontsize-normal {
+  --vi-font-size: 18px;
+}
+#VI.fontsize-big {
+  --vi-font-size: 22px;
+}
+#VI.fontsize-huge {
+  --vi-font-size: 28px;
+}
+#VI .font-size {
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+#VI .font-size__btn {
+  height: 41px;
+  width: 41px;
+  padding: 1px;
+  border: 2px solid transparent;
+  margin-right: 2px;
+}
+#VI .font-size__btn span {
+  width: 35px;
+  height: 35px;
+  line-height: 35px !important;
+  display: block;
+  font-size: inherit;
+}
+#VI .font-size__btn--small {
+  font-size: 20px;
+}
+#VI .font-size__btn--middle {
+  font-size: 25px;
+}
+#VI .font-size__btn--large {
+  font-size: 30px;
+}
+#VI .font-size__btn.active {
+  border-color: black;
+}
+#VI .font-size__btn:hover {
+  border-color: black;
+  background-color: transparent;
+  color: black;
+}
+@media screen and (max-width: 1023px) {
+  #VI .font-size {
+    width: 50%;
+    margin-right: 0;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #VI .font-size {
+    width: 100%;
+    justify-content: center;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  #VI.fontsize-normal {
+    font-size: 16px;
+  }
+  #VI.fontsize-big {
+    font-size: 20px;
+  }
+  #VI.fontsize-huge {
+    font-size: 24px;
+  }
+}

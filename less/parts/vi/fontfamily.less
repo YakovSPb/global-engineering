@@ -1,0 +1,67 @@
+// main: ../../VI.less
+// .fontfamily
+#VI {
+    --vi-font-arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --vi-font-times: 'Times New Roman', Times, serif;
+
+    &.fontfamily-arial {
+        --vi-font-family: var(--vi-font-arial);
+    }
+
+    &.fontfamily-times {
+        --vi-font-family: var(--vi-font-times);
+    }
+}
+
+// panel
+#VI {
+    .font-family {
+        padding: 8px 0 4px;
+        flex-wrap: wrap;
+
+        &__btn {
+            &[data-value="arial"] {
+                font-family: var(--vi-font-arial);
+            }
+
+            &[data-value="times"] {
+                font-family: var(--vi-font-times);
+            }
+
+            text-transform: none;
+            border-color: transparent;
+            font-size: 20px;
+            height: 35px;
+            margin-right: 2px;
+            line-height: 30px !important;
+
+            &.active {
+                border-color: black;
+            }
+
+            &:hover {
+                border-color: black;
+                background-color: transparent;
+                color: black;
+            }
+        }
+
+        .btn-group {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #VI {
+        .font-family {
+            flex-direction: column;
+
+            .btn-group {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+// #fontfamily

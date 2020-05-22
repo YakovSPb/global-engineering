@@ -1,0 +1,84 @@
+// main: ../template.less
+// .logo
+.logo {
+    flex-shrink: 0;
+    margin-right: 20px;
+    width: 150px;
+
+    a {
+        display: block;
+    }
+
+    // VI
+    #VI & {
+        width: initial;
+        font-weight: bold;
+        display: inline-flex;
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+        margin-right: 0;
+
+        &__line {
+            &--first {
+                font-size: 2.2rem;
+            }
+
+            &--second {
+                font-size: 1.8rem;
+            }
+        }
+
+        &--footer {
+            margin-right: 0;
+            .logo__digits {
+                font-size: 70px;
+                margin-right: 10px;
+                line-height: 60px;
+            }
+
+            .logo__line {
+                &--first {
+                    font-size: 1.8rem;
+                }
+
+                &--second {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    #VI.color-black {
+        &__text {
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .logo {
+        margin-right: 10px;
+        width: 100px;
+
+        // VI
+        #VI & {
+            &__line {
+                &--first {
+                    font-size: 1.6rem;
+                }
+
+                &--second {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .logo {
+        margin-right: 0;
+    }
+}
+
+// #logo

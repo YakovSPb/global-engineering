@@ -1,0 +1,94 @@
+// main: ../../VI.less
+// .fontsize
+#VI{
+    &.fontsize-normal{
+        --vi-font-size: 18px;
+    }
+    &.fontsize-big{
+        --vi-font-size: 22px;
+    }
+    &.fontsize-huge{
+        --vi-font-size: 28px;
+    }
+}
+
+#VI {
+    .font-size{
+        margin-right: 5px;
+        margin-bottom: 10px;
+        &__btn{
+            height: 41px;
+            width: 41px;
+            padding: 1px;
+            border: 2px solid transparent;
+            margin-right: 2px;
+            span{
+                width: 35px;
+                height: 35px;
+                line-height: 35px !important;
+                display: block;
+                font-size: inherit;
+            }
+            &--small {
+                font-size: 20px;
+            }
+
+            &--middle {
+                font-size: 25px;
+            }
+
+            &--large {
+                font-size: 30px;
+            }
+
+            &.active {
+                border-color: black;
+            }
+
+            &:hover {
+                border-color: black;
+                background-color: transparent;
+                color: black;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #VI{
+        .font-size{
+            width: 50%;
+            margin-right: 0;
+            justify-content: flex-end;
+            padding-right: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #VI{
+        .font-size{
+            width: 100%;
+            justify-content: center;
+            padding-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #VI.fontsize {
+        &-normal {
+            font-size: 16px;
+        }
+
+        &-big {
+            font-size: 20px;
+        }
+
+        &-huge {
+            font-size: 24px;
+        }
+    }
+}
+
+// #fontsize

@@ -1,0 +1,80 @@
+// main: ../template.less
+// .auth
+.auth {
+    margin-right: 30px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    &__link {
+        color: #000;
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+        &--login {
+            text-decoration: none;
+            border-bottom: 1px dashed #000;
+            text-transform: uppercase;
+            &:hover {
+                color: @color__link;
+                border-color: @color__link;
+            }
+        }
+        &--register {
+            text-decoration: none;
+            border-bottom: 1px solid #000;
+            &:hover {
+                color: @color__link;
+                border-color: @color__link;
+            }
+        }
+    }
+    &__mobile-link {
+        display: none;
+        margin-right: 20px;
+        width: 26px;
+        height: 26px;
+        .icon {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .auth {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: @color__pale;
+        height: 51px;
+        transform: translateY(-100%);
+        transition: transform 0.2s;
+        z-index: 3;
+        border-bottom: 2px solid;
+        background-position-x: 20px;
+        justify-content: flex-end;
+        padding-right: 20px;
+        margin-right: 0;
+        &__mobile-link {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .auth {
+        &__mobile-link {
+            margin-right: 15px;
+        }
+    }
+}
+
+// #auth

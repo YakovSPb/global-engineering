@@ -1,0 +1,72 @@
+// main: main.less
+
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+input,
+textarea,
+button,
+select{
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+	font-size: inherit;
+	line-height: 1.15;
+	margin: 0;
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ol{
+	padding: 0;
+	margin: 0;
+}
+
+input,
+textarea,
+button,
+select{
+	transition: border-color 0.25s;
+	&:focus{
+		outline: none;
+	}
+}
+
+img{
+	vertical-align: top;
+	max-width: 100%;
+}
+
+*::selection{
+	background: @color__main;
+	color: #fff;
+}
+
+//=================== Initial styles ======================//
+
+body {
+	height: 100%;
+}
+
+
+html{
+	font-size: @font__size-normal;
+	overflow-y: scroll;
+	background-color: @color__bg;
+	font-weight: 400;
+	color: @color__text;
+	font-family : @font__family-main;
+}
+
+input,
+textarea{
+	.placeholder(lighten(@color__text,70%), @font__size-normal);
+}

@@ -1,0 +1,73 @@
+// main: ../../VI.less
+// .btn
+#VI {
+    .btn {
+        &-group {
+            display: flex;
+        }
+    }
+
+    .additional-btn {
+        font-size: 18px;
+        text-transform: none;
+        background-color: #fff;
+        border: 2px solid black;
+        color: black;
+        height: 35px;
+        padding-left: 10px;
+        padding-right: 60px;
+        margin-right: 10px;
+        position: relative;
+        margin-bottom: 10px;
+        line-height: 30px !important;
+
+        .icon {
+            color: black;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transition: all 0.5s;
+        }
+
+        &.active {
+            .icon {
+                transform: rotateX(180deg);
+            }
+        }
+
+        &:hover {
+            background-color: white;
+            border-color: black;
+        }
+    }
+
+    .common-btn {
+        font-size: 16px;
+        height: 35px;
+        line-height: 35px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-transform: none;
+        color: white;
+        margin-bottom: 10px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    #VI {
+        .additional-btn {
+            margin-right: 0;
+        }
+    }
+}
+
+// #btn

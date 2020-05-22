@@ -1,0 +1,28 @@
+// main: ../template.less
+// .social
+.social {
+    display: flex;
+    &__item {
+        margin-right: 5px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background-color: @color__main;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        .icon {
+            color: #fff;
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
+
+// #social

@@ -1,0 +1,222 @@
+// main: ../template.less
+// .header
+.header {
+    position: relative;
+
+    &-main {
+        display: flex;
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        position: relative;
+    }
+
+    &-contacts {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+
+        &-item {
+            margin-right: 30px;
+            display: flex;
+            align-items: center;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &__data {
+                margin-left: 10px;
+                line-height: 1.3;
+            }
+        }
+    }
+
+    &-icon {
+        width: 48px;
+        height: 48px;
+        border: 1px solid @color__line;
+        border-radius: 50%;
+        padding: 11px;
+        transition: 0.25s;
+        flex-shrink: 0;
+
+        .icon {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-phone {
+        line-height: 1;
+        white-space: nowrap;
+
+        &__city {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 15px;
+        }
+
+        &__number {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 27px;
+            position: relative;
+            top: -2px;
+        }
+    }
+
+    &-calloreder {
+        .link;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    // VI
+    #VI & {
+        margin-bottom: 1.5rem;
+        transition: margin-top 0.5s linear;
+        text-align: center;
+
+        &__contacts {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            flex-direction: column;
+        }
+
+        &__phone {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        &__address {
+            font-size: 1.2rem;
+        }
+
+        &__email {
+            font-size: 1.2rem;
+        }
+
+        &__top{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .header {
+        &-main {}
+
+        &-contacts {
+            display: block;
+            margin-left: auto;
+            margin-right: 20px;
+
+            &-item {
+                margin-right: 0;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .header {
+        &-contacts {
+            margin-right: 0;
+
+            &-item {}
+        }
+        // VI
+        #VI & {
+            border-bottom: 2px solid black;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        &-main {}
+
+        &-contacts {
+            &-item {
+                &__data {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        &-icon {
+            width: 32px;
+            height: 32px;
+            padding: 7px;
+        }
+
+        &-phone {
+            &__city {
+                font-size: 13px;
+            }
+
+            &__number {
+                font-size: 23px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .header {
+        &-main {
+            flex-wrap: wrap;
+        }
+
+        &-contacts {
+            display: flex;
+            margin-top: 20px;
+            margin-left: 0;
+
+            &-item {
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+        }
+
+        &-icon {}
+
+        &-phone {}
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .header {
+        &-main {
+            flex-direction: column;
+        }
+
+        &-contacts {
+            display: block;
+
+            &-item {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        &-icon {}
+
+        &-phone {}
+    }
+}
+
+// #header

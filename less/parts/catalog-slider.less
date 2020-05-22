@@ -1,0 +1,72 @@
+// main: ../template.less
+// .catalog-slider
+
+//==== catalog tabs on homepage ====//
+
+.catalog-slider {
+    margin: 0 -10px;
+    overflow: hidden;
+    height: 0;
+    &.slick-initialized{
+        height: initial;
+        overflow: visible;
+    }
+    &-wrapper {
+        overflow: hidden;
+    }
+    &__item{
+        .col{
+            padding: 0 10px 30px !important;
+            height: 100%;
+        }
+    }
+    &__arrow {
+        position: absolute;
+        top: 95.5px;
+        width: 42px;
+        height: 42px;
+        display: block;
+        background: #fff;
+        border: 0;
+        border-radius: 50%;
+        z-index: 2;
+        cursor: pointer;
+        padding: 0;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        &:hover {
+            border-color: @color__main;
+        }
+        &.slick-disabled {
+            cursor: default;
+            .icon {
+                color: lighten(desaturate(@color__main, 50%), 47%);
+                fill: lighten(desaturate(@color__main, 50%), 47%);
+            }
+        }
+        .icon {
+            width: 40px;
+            height: 40px;
+            fill: lighten(desaturate(@color__main, 30%), 40%);
+            color: @color__main;
+        }
+        &--next {
+            right: 4px;
+        }
+        &--prev {
+            left: 4px;
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.main-content.@{resize-prefix}-@{resize-phone} {
+    .catalog-slider {
+        margin: 0 -5px -15px;
+        height: initial !important;
+    }
+}
+
+// #catalog-slider

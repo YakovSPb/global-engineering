@@ -1,0 +1,111 @@
+// main: ../../VI.less
+// .mobile-nav
+.mobile {
+    &-nav-vi {
+        display: none;
+        border: 2px solid #000;
+        margin-top: 1rem;
+
+        &__toggle {
+            position: relative;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            margin-top: 1rem;
+            display: none;
+
+            span {
+                display: block;
+                height: 0.5rem;
+                width: 3rem;
+                margin: 0.13rem auto;
+                flex-shrink: 0;
+                background-color: #000;
+                transition: 0.25s;
+            }
+        }
+
+        .menu__is-show & {
+            &__toggle {
+                span {
+                    opacity: 0;
+
+                    &:first-child {
+                        opacity: 1;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: 14px;
+                    }
+
+                    &:last-child {
+                        opacity: 1;
+                        transform: rotate(-45deg);
+                        position: absolute;
+                        top: 14px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &-menu-vi {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        &__item {
+            padding: 0.3rem 0.5rem;
+        }
+
+        &__next-link {
+            display: none;
+        }
+    }
+
+    &-submenu-vi {
+        margin-top: 0.5rem;
+        margin-bottom: 0.3rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+
+        &__link {
+            font-size: 0.9rem;
+        }
+
+        &__item {
+            margin-top: 0.1rem;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+#VI.color-black{
+    .mobile{
+        &-nav-vi{
+            &__toggle {
+                span {
+                    background-color: #fff ;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .mobile {
+        &-nav-vi {
+            &__toggle {
+                display: flex;
+            }
+        }
+    }
+}
+
+// #mobile-nav

@@ -1,0 +1,133 @@
+// main: ../template.less
+// .location-popup
+
+.location{
+    &__link{
+        &_mobile{
+            display: none;
+        }
+    }
+}
+.location-popup{
+    background: @color__pale;
+    min-width: 280px;
+    padding: 24px 25px 30px;
+    position: absolute;
+    top: 44px;
+    border: 1px solid #ddd9d6;
+    text-align: center;
+    z-index: 4;
+    display: none;
+    left: 0;
+    &:after,
+    &:before{
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+       
+    }
+    &:after{
+        top: -10px;
+        border-color: transparent transparent @color__pale;
+    }
+    &:before{
+        top: -11px;
+        border-color: transparent transparent #ddd9d6;
+    }
+    &.show{
+        display: block;
+    }
+    &__title{
+        font-size: 20px;
+    }
+    &__text{
+        margin-top: 13px;
+        opacity: .6;
+    }
+    &__btns{
+        margin-top: 11px;
+    }
+    &__btn{
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+}
+
+.template-page{
+    .location-popup{
+        left: -1px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .location{
+        margin-right: 30px;
+    }
+    .location-popup{
+        max-width: ~"calc(100% - 40px)";
+        top: 65px;
+        margin: auto;
+        padding: 20px;
+        left: initial;
+        right: 20px;
+        &.show{
+            position: fixed;
+        }
+    }
+    .template-page{
+        .location-popup{
+            left: 19px;
+            max-width: ~"calc(100% - 38px)";
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .location{
+        & > span{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .location{
+        display: none;
+        &__link{
+            &_mobile{
+                display: block;
+                width: 26px;
+                height: 26px;
+                margin-right: 15px;
+                .icon{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .location-popup{
+        padding: 15px;
+        left: 15px;
+        max-width: ~"calc(100% - 30px)";
+    }
+    .template-page{
+        .location-popup{
+            left: 14px;
+            max-width: ~"calc(100% - 28px)";
+        }
+    }
+}
+
+// #location-popup

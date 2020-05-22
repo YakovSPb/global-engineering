@@ -1,0 +1,56 @@
+.logo {
+  flex-shrink: 0;
+  margin-right: 20px;
+  width: 150px;
+}
+.logo a {
+  display: block;
+}
+#VI .logo {
+  width: initial;
+  font-weight: bold;
+  display: inline-flex;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  margin-right: 0;
+}
+#VI .logo__line--first {
+  font-size: 2.2rem;
+}
+#VI .logo__line--second {
+  font-size: 1.8rem;
+}
+#VI .logo--footer {
+  margin-right: 0;
+}
+#VI .logo--footer .logo__digits {
+  font-size: 70px;
+  margin-right: 10px;
+  line-height: 60px;
+}
+#VI .logo--footer .logo__line--first {
+  font-size: 1.8rem;
+}
+#VI .logo--footer .logo__line--second {
+  font-size: 1.5rem;
+}
+.logo #VI.color-black__text {
+  color: white;
+}
+@media screen and (max-width: 767px) {
+  .logo {
+    margin-right: 10px;
+    width: 100px;
+  }
+  #VI .logo__line--first {
+    font-size: 1.6rem;
+  }
+  #VI .logo__line--second {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .logo {
+    margin-right: 0;
+  }
+}

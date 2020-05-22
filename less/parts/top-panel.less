@@ -1,0 +1,27 @@
+// main: ../template.less
+// .top-panel
+.top-panel {
+    .container;
+    background-color: @color__pale;
+    display: flex;
+    align-items: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+
+@media screen and (min-width: 1024px) {
+    .top-panel {
+        margin-right: -30px;
+        margin-left: -30px;
+        position: static;
+    }
+}
+
+// #top-panel

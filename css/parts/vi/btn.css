@@ -1,0 +1,53 @@
+#VI .btn-group {
+  display: flex;
+}
+#VI .additional-btn {
+  font-size: 18px;
+  text-transform: none;
+  background-color: #fff;
+  border: 2px solid black;
+  color: black;
+  height: 35px;
+  padding-left: 10px;
+  padding-right: 60px;
+  margin-right: 10px;
+  position: relative;
+  margin-bottom: 10px;
+  line-height: 30px !important;
+}
+#VI .additional-btn .icon {
+  color: black;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.5s;
+}
+#VI .additional-btn.active .icon {
+  transform: rotateX(180deg);
+}
+#VI .additional-btn:hover {
+  background-color: white;
+  border-color: black;
+}
+#VI .common-btn {
+  font-size: 16px;
+  height: 35px;
+  line-height: 35px !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: none;
+  color: white;
+  margin-bottom: 10px;
+}
+#VI .common-btn:hover {
+  text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  #VI .additional-btn {
+    margin-right: 0;
+  }
+}

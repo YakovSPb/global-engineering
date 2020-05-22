@@ -1,0 +1,126 @@
+// main: ../../VI.less
+// .panel
+#VI {
+    .vi-panel {
+        color: @color__text;
+        background-color: #ecebeb;
+        border-bottom: 5px solid var(--vi-border-color);
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        letter-spacing: normal;
+    
+        & * {
+            font-family: var(--vi-font-arial);
+            text-decoration: none;
+    
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    
+        &__top {
+            padding: 20px 0 2px;
+            flex-wrap: wrap;
+            .font-size,
+            .site-color{
+                .vi-panel__label{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    
+        &__bottom {
+            display: none;
+            top: 100%;
+            background-color: #ecebeb;
+            left: 0;
+            width: 100%;
+            border-top: 2px solid black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    
+        &__label {
+            margin-right: 5px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            line-height: 30px !important;
+        }
+    
+        &-toggle {
+            font-size: 16px;
+            height: 35px;
+            line-height: 35px !important;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-transform: none;
+            color: #fff !important;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            display: none;
+    
+            &__wrap {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+
+    #VI{
+        .vi-panel {
+            &__wrap {
+                display: block !important;
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 1023px) {
+
+    #VI{
+        .vi-panel {
+            &__wrap {
+                display: none;
+            }
+    
+            &__top {
+                justify-content: center;
+            }
+    
+            &__bottom {
+                border-bottom: 2px solid var(--vi-border-color);
+            }
+    
+            &-toggle {
+                display: block;
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 767px) {
+
+    #VI{
+        .vi-panel {
+            &__top {
+                flex-direction: column;
+            }
+        }
+    }
+
+
+}
+
+// #panel

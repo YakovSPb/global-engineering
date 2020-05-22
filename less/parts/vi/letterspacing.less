@@ -1,0 +1,70 @@
+// main: ../../VI.less
+// .letterspacing
+#VI{
+    --vi-spacing-normal: normal; 
+    --vi-spacing-big: 1px;
+    --vi-spacing-huge: 3px; 
+    &.letterspacing-normal{
+        --vi-letter-spacing: var(--vi-spacing-normal);
+    }
+    &.letterspacing-big{
+        --vi-letter-spacing: var(--vi-spacing-big);
+    }
+    &.letterspacing-huge{
+        --vi-letter-spacing: var(--vi-spacing-huge);
+    }
+}
+
+#VI{
+    .letter-spacing{
+        flex-wrap: wrap;
+        &__btn {
+            text-transform: none;
+            border-color: transparent;
+            font-size: 20px;
+            height: 35px;
+            margin-right: 2px;
+            line-height: 30px !important;
+
+            &[data-value="normal"] {
+                letter-spacing: var(--vi-spacing-normal);
+            }
+
+            &[data-value="big"] {
+                letter-spacing: var(--vi-spacing-big);
+            }
+
+            &[data-value="huge"] {
+                letter-spacing: var(--vi-spacing-huge);
+            }
+
+            &.active {
+                border-color: black;
+            }
+
+            &:hover {
+                border-color: black;
+                background-color: transparent;
+                color: black;
+            }
+        }
+        
+        .btn-group {
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #VI{
+        .letter-spacing{
+            flex-direction: column;
+            .btn-group {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+// #letterspacing

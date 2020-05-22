@@ -1,0 +1,39 @@
+// main: ../template.less
+// .switch-lang
+.switch-lang {
+    margin-right: 30px;
+    display: flex;
+}
+
+.switch-lang-item {
+    .link;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    transition: 0.25s;
+    color: #000;
+    border-color: #000;
+    &:hover {
+        border-color: @color__main;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    &__title {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .switch-lang{
+        margin-left: 30px;
+    }
+}
+@media screen and (max-width: 499px) {
+    .switch-lang{
+        margin-left: 0;
+        margin-right: 20px;
+    }
+}
+
+// #switch-lang

@@ -1,0 +1,54 @@
+#VI {
+  --vi-spacing-normal: normal;
+  --vi-spacing-big: 1px;
+  --vi-spacing-huge: 3px;
+}
+#VI.letterspacing-normal {
+  --vi-letter-spacing: var(--vi-spacing-normal);
+}
+#VI.letterspacing-big {
+  --vi-letter-spacing: var(--vi-spacing-big);
+}
+#VI.letterspacing-huge {
+  --vi-letter-spacing: var(--vi-spacing-huge);
+}
+#VI .letter-spacing {
+  flex-wrap: wrap;
+}
+#VI .letter-spacing__btn {
+  text-transform: none;
+  border-color: transparent;
+  font-size: 20px;
+  height: 35px;
+  margin-right: 2px;
+  line-height: 30px !important;
+}
+#VI .letter-spacing__btn[data-value="normal"] {
+  letter-spacing: var(--vi-spacing-normal);
+}
+#VI .letter-spacing__btn[data-value="big"] {
+  letter-spacing: var(--vi-spacing-big);
+}
+#VI .letter-spacing__btn[data-value="huge"] {
+  letter-spacing: var(--vi-spacing-huge);
+}
+#VI .letter-spacing__btn.active {
+  border-color: black;
+}
+#VI .letter-spacing__btn:hover {
+  border-color: black;
+  background-color: transparent;
+  color: black;
+}
+#VI .letter-spacing .btn-group {
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  #VI .letter-spacing {
+    flex-direction: column;
+  }
+  #VI .letter-spacing .btn-group {
+    justify-content: center;
+  }
+}

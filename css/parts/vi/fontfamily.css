@@ -1,0 +1,47 @@
+#VI {
+  --vi-font-arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --vi-font-times: 'Times New Roman', Times, serif;
+}
+#VI.fontfamily-arial {
+  --vi-font-family: var(--vi-font-arial);
+}
+#VI.fontfamily-times {
+  --vi-font-family: var(--vi-font-times);
+}
+#VI .font-family {
+  padding: 8px 0 4px;
+  flex-wrap: wrap;
+}
+#VI .font-family__btn {
+  text-transform: none;
+  border-color: transparent;
+  font-size: 20px;
+  height: 35px;
+  margin-right: 2px;
+  line-height: 30px !important;
+}
+#VI .font-family__btn[data-value="arial"] {
+  font-family: var(--vi-font-arial);
+}
+#VI .font-family__btn[data-value="times"] {
+  font-family: var(--vi-font-times);
+}
+#VI .font-family__btn.active {
+  border-color: black;
+}
+#VI .font-family__btn:hover {
+  border-color: black;
+  background-color: transparent;
+  color: black;
+}
+#VI .font-family .btn-group {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  #VI .font-family {
+    flex-direction: column;
+  }
+  #VI .font-family .btn-group {
+    justify-content: center;
+  }
+}
