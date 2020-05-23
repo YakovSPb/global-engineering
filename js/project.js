@@ -390,13 +390,38 @@ $('.clients_slider').slick({
 	arrows: false,
 	responsive: [
 	{
-		breakpoint: 1379,
+		breakpoint: 1200,
 		settings: {
-			slidesToShow: 1
-		}
+			slidesToShow: 3,
+			slidesToScroll: 3,
+		},
+	},
+	{
+		breakpoint: 550,
+		settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1,
+		}	
 	}
 	]
 });
+
+//Mobile menu
+const link = document.getElementsByClassName('menu-toggle')
+const close = document.getElementsByClassName('close-menu')
+const menu = document.getElementsByClassName('m-menu')
+
+link[0].addEventListener('click', event => {
+    event.preventDefault()
+    menu[0].classList.add('m-menu__active')
+    link[0].style.display = 'none'
+
+})
+close[0].addEventListener('click', event => {
+    event.preventDefault()
+    menu[0].classList.remove('m-menu__active')
+    link[0].style.display = 'block'
+        })
 
 });
 
