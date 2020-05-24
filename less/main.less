@@ -1052,12 +1052,6 @@ body{
         background: @bluetext;
         transition: .3s all ease;
         position: relative;
-        &:hover{
-            background: @accent;
-            .aside-menu__submenu{
-                display: block;
-            }
-        }
     }
     &__link{
         display: block;
@@ -1069,7 +1063,16 @@ body{
             color: #fff;
         }
     }
-    &__submenu{
+    .active{
+        background: @accent;
+        .sub-menu{
+            display: block;
+        }
+    }
+
+}
+
+.sub-menu{
         display: none;
         background: #fff;
         padding-top: 7px;
@@ -1086,35 +1089,35 @@ body{
             border-color: @bluetext transparent transparent transparent;
 
         }
+        &__link{
+            display: block;
+            text-decoration: none;
+            padding: 10px 0px 11px 0;
+            font-size: 14px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #d5d5d5;
+        }
+        &__item{
+            position: relative;
+            &:hover{
+                &:after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 32px;
+                    height: 2px;
+                    background: @bluetext;
+                }
+            }
+    
+            &:last-child{
+                .sub-menu__link{
+                    border-bottom: none;
+                }
+            }
+        }
     }  
-    &__sub-link{
-        display: block;
-        padding: 10px 0px 11px 0;
-        font-size: 14px;
-        text-transform: uppercase;
-        border-bottom: 1px solid #d5d5d5;
-    }
-    &__sub-item{
-        position: relative;
-        &:hover{
-            &:after{
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 32px;
-                height: 2px;
-                background: @bluetext;
-            }
-        }
-
-        &:last-child{
-            .aside-menu__sub-link{
-                border-bottom: none;
-            }
-        }
-    }
-}
 
 //Aside news
 .aside_news{
